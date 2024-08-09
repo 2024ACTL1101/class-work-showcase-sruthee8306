@@ -280,11 +280,8 @@ the next line after printing
 - Option 1: Implement a profit-taking strategy that you sell half of your holdings if the price has increased by a certain percentage (e.g., 20%) from the average purchase price.
 - Option 2: Implement a stop-loss mechanism in the trading strategy that you sell half of your holdings if the stock falls by a certain percentage (e.g., 20%) from the average purchase price. You don't need to buy 100 stocks on the days that the stop-loss mechanism is triggered.
 
-
 ```r
-#Profit-Taking Strategy, In this step, we will implement a profit-taking strategy. If
-the price has increased by 20% from the average purchase price, we will sell half of
-the holdings.
+#Profit-Taking Strategy, In this step, we will implement a profit-taking strategy. If the price has increased by 20% from the average purchase price, we will sell half of the holdings.
 # Define the start and end dates for the period
 start_date <- as.Date("01-01-2022", format="%m-%d-%Y")
 end_date <- as.Date("12-31-2022", format="%m-%d-%Y")
@@ -292,8 +289,7 @@ end_date <- as.Date("12-31-2022", format="%m-%d-%Y")
 trading_period_df <- amd_df[amd_df$date >= start_date & amd_df$date <= end_date, ]
 # Set profit-taking threshold (e.g., 20%)
 profit_threshold <- 0.2
-# Initialize columns for trade type, cost/proceeds, and accumulated shares in trading
-_period_df
+# Initialize columns for trade type, cost/proceeds, and accumulated shares in trading_period_df
 trading_period_df$trade_type <- NA
 trading_period_df$costs_proceeds <- 0
 trading_period_df$accumulated_shares <- 0
