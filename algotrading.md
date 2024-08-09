@@ -229,8 +229,7 @@ t day
 # After the loop, check if there are accumulated shares to sell
 if (accumulated_shares > 0) {
  trading_period_df$trade_type[nrow(trading_period_df)] <- 'sell'
- trading_period_df$costs_proceeds[nrow(trading_period_df)] <- accumulated_shares * t
-rading_period_df$close[nrow(trading_period_df)]
+ trading_period_df$costs_proceeds[nrow(trading_period_df)] <- accumulated_shares * trading_period_df$close[nrow(trading_period_df)]
  # Leave accumulated_shares as is to reflect the number of shares before the sell
 }
 ```
